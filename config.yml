@@ -1,6 +1,6 @@
 title: LeVioc
 baseline: Site Web en mémoire de LeVioc.
-baseurl: http://localhost:8000/
+baseurl: https://levioc.netlify.app/
 description: Site Web en mémoire de LeVioc, meilleur partenaire de jeu vidéo.
 author:
     name: Arnaud Ligny
