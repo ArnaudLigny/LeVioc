@@ -1,8 +1,12 @@
-title: LeVioc
-baseline: Site Web en mémoire de LeVioc.
+title: Les évaluations de LeVioc
 baseurl: https://levioc.netlify.app/
-description: Site Web en mémoire de LeVioc, meilleur partenaire de jeu vidéo.
+description: Ce site web liste les évaluations de jeux vidéos rédigées par LeVioc sur Steam.
 author:
     name: Arnaud Ligny
     url: https://arnaudligny.fr
 image: avatar.jpg
+language: fr
+languages:
+  - code: fr
+    name: Français
+    locale: fr_FR
