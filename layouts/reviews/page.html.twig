@@ -1,0 +1,23 @@
+{% extends 'page.html.twig' %}
+
+{% if page.recommended %}
+	{% set recommended_text = 'Recommandé' %}
+	{% set recommended_thumb = asset('images/icons/icon_thumbsUp.png')|html %}
+{% else %}
+	{% set recommended_text = 'Non recommandé' %}
+	{% set recommended_thumb = asset('images/icons/icon_thumbsDown.png')|html %}
+{% endif %}
+
+{% block content %}
+      <article>
+        <h1>{{ page.title|e }}</h1>
+        <time>{{ page.date|date("j M Y") }}</time>
+        <p>{{ asset(page.image)|html({style: 'width: 100%;'}) }}</p>
+        <div style="margin-bottom: 1rem; background: rgba( 0, 0, 0, 0.2 );">
+          <div style="float: left; margin-right: 10px;">{{ recommended_thumb }}</div>
+          <div style="font-size: smaller;">{{ recommended_text }}</div>
+          <div style="font-size: small;">{{ page.playtime }} heures</div>
+        </div>
+        {{ page.content }}
+      </article>
+{% endblock %}
