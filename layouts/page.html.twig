@@ -1,0 +1,9 @@
+{% extends '_default/page.html.twig' %}
+
+{% block content %}
+      <article>
+        <h1>{{ page.title|e }}</h1>
+        <time>{{ page.date|date("j M Y") }}</time>
+        {{ page.content }}
+      </article>
+{% endblock %}

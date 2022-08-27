@@ -1,0 +1,21 @@
+{% set pages = site.pages.showable %}
+{% if page.pages is defined %}
+  {%- set pages = page.pages -%}
+{% endif %}
+{% if page.pagination.pages is defined %}
+  {%- set pages = page.pagination.pages -%}
+{% endif %}
+
+{% extends '_default/page.html.twig' %}
+
+{% block content %}
+      {{ page.content }}
+      {%- for p in pages ~%}
+      <article>
+        <h2><a href="{{ url(p) }}">{{ p.title|e }}</a></h2>
+        <time>{{ p.date|date("j M Y") }}</time>
+        {#{{ p.content|excerpt_html }}#}
+      </article>
+      {%- endfor ~%}
+    {%~ include 'partials/pagination.html.twig' with {'page': page} only ~%}
+{% endblock content %}

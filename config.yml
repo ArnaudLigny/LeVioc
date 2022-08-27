@@ -1,0 +1,8 @@
+title: LeVioc
+baseline: Site Web en mémoire de LeVioc.
+baseurl: http://localhost:8000/
+description: Site Web en mémoire de LeVioc, meilleur partenaire de jeu vidéo.
+author:
+    name: Arnaud Ligny
+    url: https://arnaudligny.fr
+image: avatar.jpg
