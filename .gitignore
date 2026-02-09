@@ -1,7 +1,4 @@
-vendor
-cecil.phar
-.cecil
-.cache
-_site
-.netlify
-opt/build/cache
+vendor/
+.cecil/
+.cache/
+_site/
