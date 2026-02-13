@@ -15,7 +15,7 @@
           <time>{{ page.date|format_date('long') }}</time>
         </div>
         {%- if page.image|default ~%}
-        <p>{{ html(asset(page.image), attributes={alt: page.title, style: 'width: 100%; background-color: ' ~ asset(page.image)|dominant_color}) }}</p>
+        {{ html(asset(page.image), attributes={alt: page.title, style: 'width: 100%; background-color: ' ~ asset(page.image)|dominant_color}) }}
         {%- endif ~%}
         <div style="margin-bottom: 1rem; background: rgba( 0, 0, 0, 0.2 );">
           <div style="float: left; margin-right: 10px;">{{ recommended_thumb }}</div>
