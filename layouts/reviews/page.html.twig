@@ -2,10 +2,10 @@
 
 {% if page.recommended %}
 	{% set recommended_text = 'Recommandé' %}
-	{% set recommended_thumb = asset('images/icons/icon_thumbsUp.png')|html %}
+	{% set recommended_thumb = html(asset('images/icons/icon_thumbsUp.png'), {alt: 'Recommandé', style: 'margin-bottom: 0;'}) %}
 {% else %}
 	{% set recommended_text = 'Non recommandé' %}
-	{% set recommended_thumb = asset('images/icons/icon_thumbsDown.png')|html %}
+	{% set recommended_thumb = html(asset('images/icons/icon_thumbsDown.png'), {alt: 'Non recommandé', style: 'margin-bottom: 0;'}) %}
 {% endif %}
 
 {% block content %}
