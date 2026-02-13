@@ -2,8 +2,12 @@ title: Les évaluations de LeVioc
 baseurl: https://levioc.netlify.app/
 description: "Ce site web liste les évaluations de jeux vidéos rédigées par LeVioc sur Steam."
 image: avatar.jpg
+
 language: fr
 languages:
   - code: fr
     name: Français
     locale: fr_FR
+
+pages:
+  pagination: false
