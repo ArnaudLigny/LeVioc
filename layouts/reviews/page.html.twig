@@ -12,7 +12,9 @@
       <article>
         <h1>{{ page.title|e }}</h1>
         <time>{{ page.date|date("j M Y") }}</time>
+        {%- if page.image|default ~%}
         <p>{{ html(asset(page.image), attributes={alt: page.title, style: 'width: 100%; background-color: ' ~ asset(page.image)|dominant_color}) }}</p>
+        {%- endif ~%}
         <div style="margin-bottom: 1rem; background: rgba( 0, 0, 0, 0.2 );">
           <div style="float: left; margin-right: 10px;">{{ recommended_thumb }}</div>
           <div style="font-size: smaller;">{{ recommended_text }}</div>
