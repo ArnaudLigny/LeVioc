@@ -1,6 +1,6 @@
 # Les évaluations Steam de LeVioc
 
-Ce site web liste les [évaluations](https://steamcommunity.com/id/LeVioc/recommended/) de jeux vidéo rédigées par [LeVioc](https://steamcommunity.com/id/LeVioc) sur Steam.
+Ce site web liste les [évaluations](https://levioc.narno.com/reviews/) de jeux vidéo rédigées par [LeVioc sur Steam](https://steamcommunity.com/id/LeVioc).
 
 Cecil est utilisé pour générer un site statique à partir de ces évaluations, qui sont extraites automatiquement via le script `extract_reviews.php`.
 
