@@ -1,4 +1,4 @@
-{% extends 'page.html.twig' %}
+{% extends '_default/page.html.twig' %}
 
 {% if page.recommended %}
 	{% set recommended_text = 'Recommandé' %}
@@ -8,20 +8,20 @@
 	{% set recommended_thumb = html(asset('images/icons/icon_thumbsDown.png'), attributes={alt: 'Non recommandé', style: 'margin-bottom: 0;'}) %}
 {% endif %}
 
-{% block content %}
+      {%- block content ~%}
       <article>
         <div style="margin-bottom: 8px;">
           <h1>{{ page.title|e }}</h1>
           <time>{{ page.date|format_date('long') }}</time>
         </div>
         {%- if page.image|default ~%}
-        {{ html(asset(page.image), attributes={alt: page.title, style: 'width: 100%; background-color: ' ~ asset(page.image)|dominant_color}) }}
+        {{- html(asset(page.image), attributes={alt: page.title, style: 'width: 100%; background-color: ' ~ asset(page.image)|dominant_color}) ~}}
         {%- endif ~%}
         <div style="margin-bottom: 1rem; background: rgba( 0, 0, 0, 0.2 );">
           <div style="float: left; margin-right: 10px;">{{ recommended_thumb }}</div>
           <div style="font-size: smaller;">{{ recommended_text }}</div>
           <div style="font-size: small;">{{ page.playtime }} heures</div>
         </div>
-        {{ page.content }}
+        {{- page.content ~}}
       </article>
-{% endblock %}
+      {%- endblock content ~%}
