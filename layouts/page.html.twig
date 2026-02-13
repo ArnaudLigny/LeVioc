@@ -3,7 +3,7 @@
 {% block content %}
       <article>
         <h1>{{ page.title|e }}</h1>
-        <time>{{ page.date|date("j M Y") }}</time>
+        <time>{{ page.date|format_date('long') }}</time>
         {{ page.content }}
       </article>
 {% endblock %}

@@ -13,7 +13,7 @@
       {%- for p in pages ~%}
       <article>
         <h2><a href="{{ url(p) }}">{{ p.title|e }}</a></h2>
-        <time>{{ p.date|date("j M Y") }}</time>
+        <time>{{ p.date|format_date('long') }}</time>
         {#{{ p.content|excerpt_html }}#}
       </article>
       {%- endfor ~%}
