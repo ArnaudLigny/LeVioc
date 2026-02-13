@@ -10,8 +10,10 @@
 
 {% block content %}
       <article>
-        <h1>{{ page.title|e }}</h1>
-        <time>{{ page.date|date("j M Y") }}</time>
+        <div style="margin-bottom: 8px;">
+          <h1>{{ page.title|e }}</h1>
+          <time>{{ page.date|format_date('long') }}</time>
+        </div>
         {%- if page.image|default ~%}
         <p>{{ html(asset(page.image), attributes={alt: page.title, style: 'width: 100%; background-color: ' ~ asset(page.image)|dominant_color}) }}</p>
         {%- endif ~%}
