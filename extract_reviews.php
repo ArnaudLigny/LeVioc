@@ -8,7 +8,8 @@
 define('BASE_URL', 'https://steamcommunity.com/id/LeVioc/recommended/');
 define('OUTPUT_DIR', 'pages/reviews');
 define('IMAGE_DIR', 'assets/images/apps');
-define('STEAM_IMAGE_URL', 'https://cdn.akamai.steamstatic.com/steam/apps/%s/header.jpg');
+define('STEAM_IMAGE_URL', 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/%s/capsule_616x353.jpg');
+define('STEAM_IMAGE_URL_FALLBACK', 'https://cdn.akamai.steamstatic.com/steam/apps/%s/header.jpg');
 define('DELAY', 2);
 
 const MOIS_FR = [
@@ -213,6 +214,11 @@ function downloadImage($appId) {
 
     $url = sprintf(STEAM_IMAGE_URL, $appId);
     $img = @file_get_contents($url);
+
+    if (!$img) {
+        $fallbackUrl = sprintf(STEAM_IMAGE_URL_FALLBACK, $appId);
+        $img = @file_get_contents($fallbackUrl);
+    }
 
     if ($img) {
         @mkdir(IMAGE_DIR, 0755, true);
