@@ -11,3 +11,15 @@ languages:
 
 pages:
   pagination: false
+assets:
+  images:
+    optimize: true
+    quality: 75
+    responsive:
+      widths: [480, 640, 768, 1024, 1366, 1600, 1920]
+      sizes:
+        default: '100vw'
+layouts:
+  images:
+    formats: [avif, webp]
+    responsive: true
