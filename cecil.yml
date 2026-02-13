@@ -14,7 +14,7 @@ pages:
 assets:
   images:
     optimize: true
-    quality: 75
 layouts:
   images:
     formats: [avif, webp]
+    responsive: true
