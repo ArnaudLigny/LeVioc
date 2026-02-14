@@ -9,5 +9,5 @@
         <time>{{ p.date|format_date('long') }}</time>
       </article>
       {%- endfor ~%}
-    {%- include 'partials/paginator.html.twig' with {page: page} only ~%}
+    {{- include('partials/paginator.html.twig', {page}, with_context = false) ~}}
     {%- endblock content ~%}
