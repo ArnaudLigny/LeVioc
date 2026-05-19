@@ -1,11 +1,11 @@
 {% extends '_default/page.html.twig' %}
 
 {% if page.recommended %}
-	{% set recommended_text = 'Recommandé' %}
-	{% set recommended_thumb = html(asset('images/icons/icon_thumbsUp.png'), attributes={alt: 'Recommandé', style: 'margin-bottom: 0;'}) %}
+  {% set recommended_text = 'Recommandé' %}
+  {% set recommended_thumb = html(asset('images/icons/icon_thumbsUp.png'), attributes={alt: 'Recommandé', style: 'margin-bottom: 0;'}) %}
 {% else %}
-	{% set recommended_text = 'Non recommandé' %}
-	{% set recommended_thumb = html(asset('images/icons/icon_thumbsDown.png'), attributes={alt: 'Non recommandé', style: 'margin-bottom: 0;'}) %}
+  {% set recommended_text = 'Non recommandé' %}
+  {% set recommended_thumb = html(asset('images/icons/icon_thumbsDown.png'), attributes={alt: 'Non recommandé', style: 'margin-bottom: 0;'}) %}
 {% endif %}
 
       {%- block content ~%}
